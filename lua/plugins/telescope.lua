@@ -25,5 +25,7 @@ return {
       mode = "v",
       desc = "Buffer Commits Range",
     },
+    { "<leader>sp", ":lua require('telescope.builtin').pickers()<cr>", desc = "Pickers History" },
+    { "<leader>S", ":lua require('telescope.builtin').spell_suggest()<cr>", desc = "Spell Suggest" },
   },
 }
