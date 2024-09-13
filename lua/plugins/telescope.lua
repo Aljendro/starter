@@ -13,5 +13,17 @@ return {
     { "<leader>sW", LazyVim.pick("grep_string", { word_match = "-w" }), desc = "Word (Root Dir)" },
     { "<leader>sw", LazyVim.pick("grep_string", { root = false }), mode = "v", desc = "Selection (cwd)" },
     { "<leader>sW", LazyVim.pick("grep_string"), mode = "v", desc = "Selection (Root Dir)" },
+    {
+      "<leader>bc",
+      ':lua require(\'telescope.builtin\').git_bcommits({layout_strategy=\'vertical\', git_command = {"git","log","--format=%h %cn %cs %s"} })<cr>',
+      mode = "n",
+      desc = "Buffer Commits",
+    },
+    {
+      "<leader>bc",
+      ':lua require(\'telescope.builtin\').git_bcommits_range({layout_strategy=\'vertical\', git_command = {"git","log","--format=%h %cn %cs %s", "--no-patch", "-L"} })<cr>',
+      mode = "v",
+      desc = "Buffer Commits Range",
+    },
   },
 }
