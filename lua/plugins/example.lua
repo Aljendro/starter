@@ -2,6 +2,30 @@
 -- stylua: ignore
 if true then return {} end
 
+-- return {
+--   "nvim-cmp",
+--   ---@param opts cmp.ConfigSchema
+--   opts = function(_, opts)
+--     -- local snippets_index = nil
+--     -- for i, v in ipairs(opts.sources) do
+--     --   if v ~= nil then
+--     --     if v.name == "snippets" then
+--     --       snippets_index = i
+--     --       break
+--     --     end
+--     --   end
+--     -- end
+--     --
+--     -- if snippets_index ~= nil then
+--     --   table.remove(opts.sources, snippets_index)
+--     -- end
+--     -- table.insert(opts.sources, 1, {
+--     --   name = "snippets",
+--     --   priority = 200,
+--     -- })
+--   end,
+-- }
+
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
 --
 -- In your plugin files, you can:
