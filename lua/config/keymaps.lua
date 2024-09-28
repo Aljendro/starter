@@ -4,6 +4,8 @@
 
 local map = vim.keymap.set
 
+vim.diagnostic.config({ virtual_text = false })
+
 -- Faster shifting
 map("n", "<Left>", "zH", { desc = "Shift Left", silent = true })
 map("n", "<Right>", "zL", { desc = "Shift Right", silent = true })
@@ -53,6 +55,12 @@ vim.cmd("cnoreabbrev <expr> tah v:lua.CommandAbbreviation('tah', 'tab help') . '
 vim.cmd("cnoreabbrev <expr> ft v:lua.CommandAbbreviation('ft', 'set ft=')")
 -- Diff files in window
 vim.cmd("cnoreabbrev <expr> wdt v:lua.CommandAbbreviation('wdt', 'windo diffthis')")
+
+------------------------------------------------------------------------------------------------------------------------
+-- Options
+------------------------------------------------------------------------------------------------------------------------
+
+map("n", "<leader>uv", "<cmd>DiagnosticsToggleVirtualText<cr>", { desc = "Toggle Virtual Text" })
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Splits/Windows
