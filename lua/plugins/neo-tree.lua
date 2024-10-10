@@ -13,9 +13,11 @@ return {
     },
     window = {
       mappings = {
+        ["?"] = "",
         ["s"] = "",
         ["S"] = "",
         ["t"] = "",
+        ["g?"] = "show_help",
         ["<C-v>"] = "open_vsplit",
         ["<C-x>"] = "open_split",
         ["<C-t>"] = "open_tabnew",
