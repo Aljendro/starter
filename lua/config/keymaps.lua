@@ -124,15 +124,15 @@ map("n", "<leader>tc", ":tabclose<cr>", { desc = "Close Tab", silent = true })
 ------------------------------------------------------------------------------------------------------------------------
 
 -- Visual mode pressing * or # searches for the current selection
-map("x", "*", "mi:call v:lua.GetSelectedText()<cr>/<C-R>=@/<cr><cr>`i")
-map("x", "#", "mi:call v:lua.GetSelectedText()<cr>?<C-R>=@/<cr><cr>`i")
+map("x", "*", "mi:call v:lua.GetSelectedText()<cr>/<C-R>=@/<cr><cr>`i", { silent = true })
+map("x", "#", "mi:call v:lua.GetSelectedText()<cr>?<C-R>=@/<cr><cr>`i", { silent = true })
 
 -- Maintain position when you hit * or #
-map("n", "*", ":keepjumps normal! mi*`i<cr>")
-map("n", "g*", ":keepjumps normal! mig*`i<cr>")
-map("n", "#", ":keepjumps normal! mi#`i<cr>")
-map("n", "g#", ":keepjumps normal! mig#`i<cr>")
+map("n", "*", ":keepjumps normal! mi*`i<cr>", { silent = true })
+map("n", "g*", ":keepjumps normal! mig*`i<cr>", { silent = true })
+map("n", "#", ":keepjumps normal! mi#`i<cr>", { silent = true })
+map("n", "g#", ":keepjumps normal! mig#`i<cr>", { silent = true })
 
 -- Center cursor when searching
-map("n", "n", "nzzzv")
-map("n", "N", "Nzzzv")
+map("n", "n", "nzzzv", { silent = true })
+map("n", "N", "Nzzzv", { silent = true })
