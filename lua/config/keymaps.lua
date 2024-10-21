@@ -61,6 +61,7 @@ vim.cmd("cnoreabbrev <expr> wdt v:lua.CommandAbbreviation('wdt', 'windo diffthis
 ------------------------------------------------------------------------------------------------------------------------
 
 map("n", "<leader>uv", "<cmd>DiagnosticsToggleVirtualText<cr>", { desc = "Toggle Virtual Text" })
+map("n", "<leader>uW", ":set wrapscan!<cr>:set wrapscan?<cr>", { desc = "Toggle Wrap Scan" })
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Splits/Windows
