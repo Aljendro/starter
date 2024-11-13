@@ -4,8 +4,6 @@
 
 local map = vim.keymap.set
 
-vim.diagnostic.config({ virtual_text = false })
-
 -- Faster shifting
 map("n", "<Left>", "zH", { desc = "Shift Left", silent = true })
 map("n", "<Right>", "zL", { desc = "Shift Right", silent = true })
