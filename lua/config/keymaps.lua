@@ -127,10 +127,10 @@ map("x", "*", "mi:call v:lua.GetSelectedText()<cr>/<C-R>=@/<cr><cr>`i", { silent
 map("x", "#", "mi:call v:lua.GetSelectedText()<cr>?<C-R>=@/<cr><cr>`i", { silent = true })
 
 -- Maintain position when you hit * or #
-map("n", "*", ":keepjumps normal! mi*`i<cr>", { silent = true })
-map("n", "g*", ":keepjumps normal! mig*`i<cr>", { silent = true })
-map("n", "#", ":keepjumps normal! mi#`i<cr>", { silent = true })
-map("n", "g#", ":keepjumps normal! mig#`i<cr>", { silent = true })
+map("n", "*", ":keepjumps normal! mi*`i<cr>:delmarks i<cr>", { silent = true })
+map("n", "g*", ":keepjumps normal! mig*`i<cr>:delmarks i<cr>", { silent = true })
+map("n", "#", ":keepjumps normal! mi#`i<cr>:delmarks i<cr>", { silent = true })
+map("n", "g#", ":keepjumps normal! mig#`i<cr>:delmarks i<cr>", { silent = true })
 
 -- Center cursor when searching
 map("n", "n", "nzzzv", { silent = true })
