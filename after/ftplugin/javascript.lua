@@ -1,0 +1,1 @@
+require("languages.javascript").setup()
