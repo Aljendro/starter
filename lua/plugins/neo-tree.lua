@@ -2,6 +2,7 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
     filesystem = {
+      bind_to_cwd = true,
       filtered_items = {
         hide_dotfiles = false,
       },
@@ -19,7 +20,7 @@ return {
         ["t"] = "",
         ["g?"] = "show_help",
         ["<C-v>"] = "open_vsplit",
-        ["<C-x>"] = "open_split",
+        ["<C-s>"] = "open_split",
         ["<C-t>"] = "open_tabnew",
       },
     },
