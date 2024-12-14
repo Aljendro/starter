@@ -8,7 +8,7 @@ return {
       ["neotest-jest"] = {
         jestCommand = "jest",
         -- jestConfigFile =  '',
-        cwd = function(path)
+        cwd = function(_)
           return vim.fn.getcwd()
         end,
       },
