@@ -11,38 +11,3 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     vim.opt_local.formatoptions:remove({ "o" })
   end,
 })
-
-vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
-  group = customVim,
-  pattern = table.concat({
-    "*.edn",
-    "*.clj",
-    "*.cljc",
-    "*.cljs",
-    "*.css",
-    "*.fnl",
-    "*.go",
-    "*.html",
-    "*.js",
-    "*.json",
-    "*.jsonl",
-    "*.jsx",
-    "*.lua",
-    "*.md",
-    "*.py",
-    "*.rs",
-    "*.ts",
-    "*.tsx",
-    "*.txt",
-    "*.yaml",
-    "*.yml",
-    "*.hbs",
-    "*.cpp",
-    "*.c",
-    "*.h",
-    "*.hpp",
-  }, ","),
-  callback = function()
-    vim.cmd("silent! w")
-  end,
-})
