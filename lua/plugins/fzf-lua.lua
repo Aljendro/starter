@@ -1,5 +1,17 @@
 return {
   "ibhagwan/fzf-lua",
+  opts = {
+    winopts = {
+      preview = {
+        hidden = true,
+      },
+    },
+    keymap = {
+      builtin = {
+        ["<c-p>"] = "toggle-preview",
+      },
+    },
+  },
   keys = {
     { "<leader>/", LazyVim.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
     { "<leader>sg", LazyVim.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
