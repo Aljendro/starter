@@ -7,11 +7,6 @@ return {
       auto_insert_mode = true,
       question_header = "  " .. user .. " ",
       answer_header = "  Copilot ",
-      window = {
-        layout = "float",
-        width = 0.9,
-        height = 0.8,
-      },
       contexts = require("copilot.contexts"),
       prompts = require("copilot.prompts"),
     }
