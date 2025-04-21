@@ -55,4 +55,31 @@ return {
       }
     end,
   },
+  plenary_api = {
+    description = "Includes the documentation for the Plenary API.",
+    resolve = function()
+      local urls = {
+        job = "https://raw.githubusercontent.com/nvim-lua/plenary.nvim/refs/heads/master/lua/plenary/job.lua",
+        async = "https://raw.githubusercontent.com/nvim-lua/plenary.nvim/refs/heads/master/lua/plenary/async/async.lua",
+      }
+
+      local content = ""
+      for name, url in pairs(urls) do
+        local context_data = context.get_url(url)
+        if context_data and context_data.content then
+          content = content .. "#### start " .. name .. " implementation ###\n\n"
+          content = content .. context_data.content .. "\n\n"
+          content = content .. "### end " .. name .. " implementation ###\n\n"
+        end
+      end
+
+      return {
+        {
+          content = content,
+          filename = "plenary_api_documentation",
+          filetype = "text",
+        },
+      }
+    end,
+  },
 }
