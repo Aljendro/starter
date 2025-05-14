@@ -141,4 +141,4 @@ map("n", "N", "Nzzzv", { silent = true })
 ------------------------------------------------------------------------------------------------------------------------
 
 -- Fold everything except fold under cursor
-map("n", "zu", "zMzvzczOzz", { desc = "Fold Other", silent = true })
+map("n", "zu", "zMzvzczOzt", { desc = "Fold Other", silent = true })
