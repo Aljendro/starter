@@ -123,8 +123,8 @@ map("n", "<leader>tc", ":tabclose<cr>", { desc = "Close Tab", silent = true })
 ------------------------------------------------------------------------------------------------------------------------
 
 -- Visual mode pressing * or # searches for the current selection
-map("x", "*", "mi:call v:lua.GetSelectedText()<cr>/<C-R>=@/<cr><cr>`i", { silent = true })
-map("x", "#", "mi:call v:lua.GetSelectedText()<cr>?<C-R>=@/<cr><cr>`i", { silent = true })
+map("x", "*", ":call v:lua.GetSelectedText()<cr>/<C-R>=@/<cr><cr>N", { silent = true })
+map("x", "#", ":call v:lua.GetSelectedText()<cr>?<C-R>=@/<cr><cr>N", { silent = true })
 
 -- Maintain position when you hit * or #
 map("n", "*", ":keepjumps normal! *N<cr>zz", { silent = true })
@@ -135,3 +135,10 @@ map("n", "g#", ":keepjumps normal! g#N<cr>zz", { silent = true })
 -- Center cursor when searching
 map("n", "n", "nzzzv", { silent = true })
 map("n", "N", "Nzzzv", { silent = true })
+
+------------------------------------------------------------------------------------------------------------------------
+-- Folds
+------------------------------------------------------------------------------------------------------------------------
+
+-- Fold everything except fold under cursor
+map("n", "zu", "zMzvzczOzz", { desc = "Fold Other", silent = true })
