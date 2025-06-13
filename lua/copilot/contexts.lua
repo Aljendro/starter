@@ -82,4 +82,18 @@ return {
       }
     end,
   },
+  fzf_advanced_markdown = {
+    description = "Includes content of the Advanced.md file in chat context.",
+    resolve = function()
+      local filepath = "/Users/alejandroalvarado/Documents/Learning/fzf-lua.wiki/Advanced.md"
+      local content = context.get_file(filepath, "markdown")
+      return {
+        {
+          content = content,
+          filename = "fzf_advanced_markdown_documentation",
+          filetype = "markdown",
+        },
+      }
+    end,
+  },
 }
