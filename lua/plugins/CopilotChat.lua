@@ -9,7 +9,7 @@ return {
       answer_header = "  Copilot ",
       contexts = require("copilot.contexts"),
       prompts = require("copilot.prompts"),
-      model = "claude-3.7-sonnet-thought",
+      model = "claude-sonnet-4",
     }
   end,
   keys = {
