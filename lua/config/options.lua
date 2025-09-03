@@ -8,3 +8,9 @@ vim.g.node_host_prog = vim.fn.expand("~/.nvm/versions/node/v24.5.0/bin/neovim-no
 vim.g.python3_host_prog = vim.fn.expand("/usr/bin/python3")
 
 vim.opt.wrapscan = false
+
+vim.filetype.add({
+  pattern = {
+    [".*.puml"] = "markdown",
+  },
+})
