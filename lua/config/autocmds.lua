@@ -47,6 +47,9 @@ vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave", "FocusLost" }, {
     "*.config",
   },
   callback = function(args)
+    if not vim.g.autosave_enabled then
+      return
+    end
     local bufnr = args.buf
     if
       vim.bo[bufnr].modified
