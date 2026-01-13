@@ -60,6 +60,14 @@ vim.cmd("cnoreabbrev <expr> wdt v:lua.CommandAbbreviation('wdt', 'windo diffthis
 
 map("n", "<leader>uv", "<cmd>DiagnosticsToggleVirtualText<cr>", { desc = "Toggle Virtual Text" })
 map("n", "<leader>uW", ":set wrapscan!<cr>:set wrapscan?<cr>", { desc = "Toggle Wrap Scan" })
+map("n", "<leader>ua", function()
+  vim.g.autosave_enabled = not vim.g.autosave_enabled
+  if vim.g.autosave_enabled then
+    vim.notify("Autosave enabled", vim.log.levels.INFO)
+  else
+    vim.notify("Autosave disabled", vim.log.levels.INFO)
+  end
+end, { desc = "Toggle Autosave" })
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Splits/Windows
