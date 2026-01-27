@@ -10,6 +10,7 @@ if vim.loop.os_uname().sysname == "Darwin" then
 end
 
 vim.opt.wrapscan = false
+vim.opt.clipboard = "unnamedplus"
 
 vim.filetype.add({
   pattern = {
