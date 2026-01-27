@@ -5,7 +5,9 @@
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_python3_provider = 0
-vim.g.node_host_prog = vim.fn.expand("~/.nvm/versions/node/v24.5.0/bin/neovim-node-host")
+if vim.loop.os_uname().sysname == "Darwin" then
+  vim.g.node_host_prog = vim.fn.expand("~/.nvm/versions/node/v24.5.0/bin/neovim-node-host")
+end
 
 vim.opt.wrapscan = false
 
