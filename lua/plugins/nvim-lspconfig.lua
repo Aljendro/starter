@@ -8,6 +8,9 @@ return {
           { "gh", vim.diagnostic.open_float, desc = "Hover" },
         },
       },
+      clangd = {
+        mason = false,
+      },
     },
   },
 }
