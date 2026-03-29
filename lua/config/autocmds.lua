@@ -16,6 +16,9 @@ local autosave_timers = {}
 vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave", "FocusLost" }, {
   group = customVim,
   pattern = {
+    "*.clj",
+    "*.cljc",
+    "*.cljs",
     "*.lua",
     "*.py",
     "*.js",
