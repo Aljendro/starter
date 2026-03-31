@@ -3,7 +3,7 @@ return {
   dependencies = {
     { "rafamadriz/friendly-snippets", dev = true },
   },
-  build = "cargo build --release",
+  version = "1.*",
   opts = {
     cmdline = { enabled = false },
   },
