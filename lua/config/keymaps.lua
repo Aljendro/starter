@@ -104,6 +104,8 @@ map("n", "sd", ":bdelete<cr>", { desc = "Delete Buffer", silent = true })
 
 -- Close all other buffers
 map("n", "sD", ":BufferLineCloseOthers<cr>", { desc = "Close Other Buffers", silent = true })
+map("n", "sL", ":BufferLineCloseLeft<cr>", { desc = "Close Left Buffers", silent = true })
+map("n", "sR", ":BufferLineCloseRight<cr>", { desc = "Close Right Buffers", silent = true })
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Tabs
