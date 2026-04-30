@@ -102,6 +102,9 @@ map("n", "si", ":bnext<cr>", { desc = "Next Buffer", silent = true })
 -- Quickly delete buffer
 map("n", "sd", ":bdelete<cr>", { desc = "Delete Buffer", silent = true })
 
+-- Close all other buffers
+map("n", "sD", ":BufferLineCloseOthers<cr>", { desc = "Close Other Buffers", silent = true })
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Tabs
 ------------------------------------------------------------------------------------------------------------------------
