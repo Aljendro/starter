@@ -41,7 +41,7 @@ return {
       ["Transpose"] = "<localleader>t",
       ["Align"] = "<localleader>a",
       ["Duplicate"] = "<localleader>d",
-      ["Rewrite Last Search"] = "<localleader>r",
+      ["Rewrite Last Search"] = "<localleader>R",
       ["Merge Regions"] = "<localleader>m",
       ["Split Regions"] = "<localleader>s",
       ["Remove Last Region"] = "<localleader>q",
